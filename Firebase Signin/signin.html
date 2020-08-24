@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="Eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devive-width; initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="../css/signin.css">
+    <title>Jean Claude SIBONIYO | Welcome </title>
+</head>
+<body>
+    <div class="container">
+        <!----nav-->
+        <nav class="main-nav">
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signin.html">Sign in</a></li>
+                <li><a href="blog.html">My blog</a></li>
+            </ul>
+        </nav>
+        <!-- @TODO - validation-->
+        <a href="signin.html"></a>
+        <Section>
+            <form id="signin-form">
+                <div class="signin-section">
+                <h3>Sign In</h3>
+                <p>Username</p>
+                <input type="text" placeholder="Enter Username" name="Username" required id="Username">
+                <p>Password</p>
+                <input type="password" placeholder="Enter Password" name="psw" required id="Password"><br>
+                <input type="submit" value="Login" id="submit">
+                </div>
+            </form>
+        </section>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+        <script src="main.j"></script>
+    </div>
+    <!-----Footer------>
+    <footer class="footer">
+        <ul>
+            <li><a href="">&copy; siboniyo 2020</a></li>
+        </ul>
+    </footer>
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+    </script>
+</body>
+</html>
