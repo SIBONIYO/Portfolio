@@ -135,6 +135,16 @@ ul {
     padding: 10px;
     margin: 10px;
 }
+.comments1 p{
+    font-size:15px;
+    font-weight: bold;
+}
+.comments1 input[type="comment"] {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
 
 /* Newsletter */
 .newsletter {
@@ -176,11 +186,11 @@ ul {
 .footer{
     background: silver;
     color: #616161;
-    font-size: 12px;
+    font-size: 20px;
     margin: 0 auto;
     padding: 0 20px 0 20px;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 @media(max-width:800px){
@@ -190,21 +200,23 @@ ul {
     }
     .comment p{
         font-size: 25px;
+        margin-left: 1%;
     }
     .email-box {
         margin-left: 5px;
     }
     .comment input[type="text"] {
-        width: 40%;
+        width: 90%;
         height: 28px;
         font-size: 25px;
+        margin: 10px;
     }
     
     .comment input[type="comment"] {
-        width: 70%;
+        width: 90%;
         height: 100px;
         font-size: 25px;
-        margin-top: 10px;
+        margin: 10px;
     }
 }
 
@@ -235,16 +247,17 @@ ul {
         margin-left: 10px;
     }
     .comment input[type="text"] {
-        width: 70%;
+        width: 90%;
         height: 28px;
     }
     
     .comment input[type="comment"] {
-        width: 70%;
+        width: 90%;
         height: 100px;
         justify-content: right;
     }
     .comment p{
         font-weight: bold;
+        margin-left: 3%;
     }
 }
