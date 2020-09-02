@@ -243,9 +243,7 @@ ul {
     .menu-btn:hover {
         opacity: 0.5;
     }
-    .main-nav ul.right-menu {
-        margin-right: 50px;
-    }
+    
     .main-nav ul.main-menu {
         display: block;
         position: absolute;
