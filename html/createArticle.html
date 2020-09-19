@@ -4,47 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="../css/signin.css">
+    <link rel="stylesheet" type="text/css" href="../css/createArticle.css">
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
     <title>Jean Claude SIBONIYO | Welcome </title>
 </head>
 <body>
     <div class="container">
-        <div class="menu-btn">
-            <i class="fas fa-bars fa-2x"></i>
-        </div>
-        <!----nav-->
-        <nav class="main-nav">
-            <ul class="main-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="signin.html">Sign in</a></li>
-                <li><a href="blog.html">My blog</a></li>
-            </ul>
-        </nav>
-        <hr>
-        <!-- sign in-->
-        <a href="signin.html"></a>
-        <Section>
-            <form id="form" onsubmit="return validation()">
-                <div class="signin-section success error">
-                <h3>Sign In</h3>
-                <div id="error"></div>
-                <p>Username</p>
-                <input type="name" placeholder="Enter Username" name="Username" id="username" required>
-                <p>Password</p>
-                <input type="password" placeholder="Enter Password" name="psw" id="password" required><br>
-                <input type="submit"  value="Login" id="submit">
-                </div>
-            </form>
-        </section>
+        <form action="" class="container-article" id="new-article">
+            <h3>New article</h3>
+            <p>Write the title of the article:</p>
+            <input type="text" placeholder="Write the Title of the new article" id="title"><br>
+            <p>Published on:</p>
+            <input type="date" id="date" name="Date"><br>
+            <p>Article Image:</p>
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload file" name="Submit">
+            <p>Description of the article:</p>
+            <textarea type="text" name="description" id="description"></textarea><br>
+            <p>Body of the Article:</p>
+            <textarea type="text" name="body of the article" id="body"></textarea>
+            <p>Published by:</p>
+            <p>Names:</p>
+            <input type="text" placeholder="Put your names here" id="name">
+            <p>Tel number:</p>
+            <input type="tel" name="phone" id="tel" pattern="(250)-[0-9]{3}-[0-9]{3}-[0-9]{3}">
+            <p>Email:</p>
+            <input type="email" placeholder=" Write your email" id="email">
+            <input type="submit" value="Submit" id="submit">
+            
+        </form>
     </div>
-    <!-----Footer------>
-    <footer class="footer">
-        <ul>
-            <li><a href="">&copy; siboniyo 2020</a></li>
-        </ul>
-    </footer>
     
         <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -67,8 +57,9 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
             const db = firebase.firestore();
-                // db.settings({ timestampsInSnapshots: true});
+            // db.settings({ timestampsInSnapshots: true});
             </script>
-    <script src="../JS/main.js"></script>
+    <script src="../JS/createArticle.js"></script>
+
 </body>
 </html>

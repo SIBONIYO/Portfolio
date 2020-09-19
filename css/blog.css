@@ -26,6 +26,8 @@ ul {
 }
 .main-nav ul {
     display: flex;
+    padding: 20px;
+    font-weight: bold;
 }
 
 .main-nav ul li {

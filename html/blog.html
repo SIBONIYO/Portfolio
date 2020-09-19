@@ -2,9 +2,11 @@
 <html lang="eng">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=devive-width; initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="../css/blog.css">
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
     <title>Jean Claude SIBONIYO | Welcome </title>
 </head>
 <body> 
@@ -21,7 +23,7 @@
                 <li><a href="blog.html">My blog</a></li>
             </ul>
         </nav>
-    
+        <hr>
         <!-----My Blog----->
         <a href="blog.html"></a>
         <section class="blog-section">
@@ -32,7 +34,7 @@
                 <h3>Beirut Digs for Survivors as Death Toll in Explosion Rises</h3>
                 <p>Angry Lebanese are demanding accountability for the mishandling of explosive material that detonated, killing more than 100 people. Some 300,000 people are displaced from their homes.</p>
                 <p>Lebanese officials fear food shortages caused by the explosion, which destroyed major grain stores and badly damaged the country’s main port.</p>
-                <a href="articlepage.html" class="btn">Read more<i class="fas fa-chevron-right"></i></a>
+                <a href="articlepage.html" class="btn" id="readmore">Read more<i class="fas fa-chevron-right"></i></a>
             </article>
             <article class="blog">
                 <img src="../img/ok/Blog/Beirut 2.jfif" alt="">
@@ -60,13 +62,13 @@
         <!--Newsletter-->
         <section>
             <div class="newsletter">
-                <form action="">
+                <form action="" id="newsletter">
                     <h3>Join Our Newsletter</h3>
                     <p>Subscribe to get email notifications when a new article is posted on the site.</p>
                     <div class="email-box">
                         <i class="fas fa-envelope"></i><br>
                         <input type="email" name="" value="" placeholder="Enter your email"><br>
-                        <button class="button" type="button" name="button">Subscribe</button>
+                        <input class="button" type="submit" id="button">
                     </div> 
                 </form>
             </div>
@@ -78,4 +80,29 @@
             <li><a href="#">&copy; siboniyo 2020</a></li>
         </ul>
     </footer>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDQoS1UvoPDWk7OTkYuXsayVofkq_dCViM",
+            authDomain: "sibo-my-web-4553a.firebaseapp.com",
+            databaseURL: "https://sibo-my-web-4553a.firebaseio.com",
+            projectId: "sibo-my-web-4553a",
+            storageBucket: "sibo-my-web-4553a.appspot.com",
+            messagingSenderId: "884731873473",
+            appId: "1:884731873473:web:c13680b67d4c9b64312c40",
+            measurementId: "G-GD6STF3Y67"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+            // db.settings({ timestampsInSnapshots: true});
+        </script>
+            <script src="../JS/readArticle.js"></script>    
 </body>

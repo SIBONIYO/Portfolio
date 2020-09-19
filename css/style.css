@@ -29,9 +29,10 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height:60px ;
-    padding:20px 0;
+    height: 60px ;
+    padding: 20px;
     font-size: 13px;
+    font-weight: bold;
 }
 
 .main-nav ul {
