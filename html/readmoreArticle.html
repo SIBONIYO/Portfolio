@@ -17,12 +17,13 @@
             <input type="text" name='title' placeholder="Write the Title of the new article" id="title"><br>
             <p>Article Image:</p>
             <input type="file" name="fileToUpload" id="fileToUpload">
-            <p>Description of the article:</p>
+            <p>Body of the article:</p>
             <textarea type="text" name="description" id="description"></textarea><br>
             <input type="submit" value="submit" id="submit">
             
         </form>
     </div>
+    </body>
     
         <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -45,9 +46,7 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
             const db = firebase.firestore();
-            // db.settings({ timestampsInSnapshots: true});
+                // db.settings({ timestampsInSnapshots: true});
             </script>
-    <script src="../JS/createArticle.js"></script>
-
-</body>
+                <script src="../JS/readmoreArticle.js"></script>
 </html>

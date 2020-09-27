@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
         <link rel="stylesheet" type="text/css" href="../css/articlepage.css">
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+       
         <title>Jean Claude SIBONIYO | Welcome </title>
     </head>
     <body>
@@ -28,21 +31,6 @@
             <section class="blog-section">
             <h2>News and stories.</h2>
             <div class="blog-container">
-                <article class="blog">
-                    <h3>Search is on for survivors after blast kills more than 100.</h3>
-                    <img src="../img/ok/Blog/Beirut 2.jfif" alt="">
-                    <p>Rescue workers still struggling to treat thousands of people wounded in an enormous explosion that rocked Beirut turned their attention on Wednesday morning to the desperate search for survivors.</p>
-                    <p>The blast, so powerful it could be felt more than 150 miles away in Cyprus, leveled whole sections of the city near the port of Beirut on Tuesday evening, leaving nothing but twisted metal and debris for blocks in Beirut’s downtown business district. It capsized a docked passenger ship, shattered windows miles away and registered on seismographs, shaking on the earth as strongly as a 3.3-magnitude earthquake.</p>
-                    <p>
-                        D'où vient-il?
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.
-
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour les curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont aussi reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham (1914).
-
-                        Où puis-je m'en procurer?
-                        Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là, mais la majeure partie d'entre elles a été altérée par l'addition d'humour ou de mots aléatoires qui ne ressemblent pas une seconde à du texte standard. Si vous voulez utiliser un passage du Lorem Ipsum, vous devez être sûr qu'il n'y a rien d'embarrassant caché dans le texte. Tous les générateurs de Lorem Ipsum sur Internet tendent à reproduire le même extrait sans fin, ce qui fait de lipsum.com le seul vrai générateur de Lorem Ipsum. Iil utilise un dictionnaire de plus de 200 mots latins, en combinaison de plusieurs structures de phrases, pour générer un Lorem Ipsum irréprochable. Le Lorem Ipsum ainsi obtenu ne contient aucune répétition, ni ne contient des mots farfelus, ou des touches d'humour.
-                    </p>
-                </article> 
                 <form>
                     <div class="comment">
                         <p>Comments:</p>
@@ -88,4 +76,30 @@
             </ul>
         </footer>
     </body>
+    
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+            <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyDQoS1UvoPDWk7OTkYuXsayVofkq_dCViM",
+                authDomain: "sibo-my-web-4553a.firebaseapp.com",
+                databaseURL: "https://sibo-my-web-4553a.firebaseio.com",
+                projectId: "sibo-my-web-4553a",
+                storageBucket: "sibo-my-web-4553a.appspot.com",
+                messagingSenderId: "884731873473",
+                appId: "1:884731873473:web:c13680b67d4c9b64312c40",
+                measurementId: "G-GD6STF3Y67"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            const db = firebase.firestore();
+                // db.settings({ timestampsInSnapshots: true});
+            </script>
+                <script src="../JS/articlePage.js"></script>  
+
 </html>

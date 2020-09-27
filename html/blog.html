@@ -21,6 +21,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="signin.html">Sign in</a></li>
                 <li><a href="blog.html">My blog</a></li>
+                <li><a href="createArticle.html">Create article</a></li>
             </ul>
         </nav>
         <hr>
@@ -29,34 +30,9 @@
         <section class="blog-section">
         <h2>My Blog.</h2>
         <div class="blog-container">
-            <article class="blog">
-                <img src="../img/ok/Blog/Beirut 1.jpg" alt="">
-                <h3>Beirut Digs for Survivors as Death Toll in Explosion Rises</h3>
-                <p>Angry Lebanese are demanding accountability for the mishandling of explosive material that detonated, killing more than 100 people. Some 300,000 people are displaced from their homes.</p>
-                <p>Lebanese officials fear food shortages caused by the explosion, which destroyed major grain stores and badly damaged the country’s main port.</p>
-                <a href="articlepage.html" class="btn" id="readmore">Read more<i class="fas fa-chevron-right"></i></a>
-            </article>
-            <article class="blog">
-                <img src="../img/ok/Blog/Beirut 2.jfif" alt="">
-                <h3>Search is on for survivors after blast kills more than 100.</h3>
-                <p>Rescue workers still struggling to treat thousands of people wounded in an enormous explosion that rocked Beirut turned their attention on Wednesday morning to the desperate search for survivors.</p>
-                <p>The blast, so powerful it could be felt more than 150 miles away in Cyprus, leveled whole sections of the city near the port of Beirut on Tuesday evening, leaving nothing but twisted metal and debris for blocks in Beirut’s downtown business district. It capsized a docked passenger ship, shattered windows miles away and registered on seismographs, shaking on the earth as strongly as a 3.3-magnitude earthquake.</p>
-                <a href="articlepage.html" class="btn">Read more<i class="fas fa-chevron-right"></i></a>
-            </article>
-            <article class="blog">
-                <img src="../img/ok/Blog/Sadio Mane.webp" alt="">
-                <h3>Sadio Mané: From Grapefruit Dribbling in Senegal to Breathtaking Ballon d'Or Contender</h3>
-                <p>From dribbling with a grapefruit in the remote Senegalese village of Bambali, to lifting the Premier League title with Liverpool, no player has had a more extraordinary journey to the top than Sadio Mané</p>
-                <p>Even before joining Liverpool in 2016, he had already etched his name into the Premier League's record books. By scoring three times in the space of two minutes and 56 seconds in Southampton's 6-1 win over Aston Villa, he remains the scorer of the fastest hat-trick in the competition's history</p>
-                <a href="articlepage.html" class="btn">Read more<i class="fas fa-chevron-right"></i></a>
-            </article>
-            <article class="blog">
-                <img src="../img/ok/Blog/jay-z.png" alt="">
-                <h3>JAY-Z REVIVES THE ITALIAN SPORTSWEAR BRAND THAT REFUSES TO DIE</h3>
-                <p>Jay-Z is like fine wine: he only gets better with age. The now 50-year-old rapper, business mogul and cultural icon is indomitable – indeed, the only musician that has more of a cultural impact than him may be his wife Beyoncé. Which is why Jay-Z (real name Shawn Carter) choosing to rock an obscure Italian sportswear brand has got streetwear fans so intrigued.</p>
-                <p>Endlessly innovative, anything ‘The Carters’ touches turns to gold, whether it’s fashion collaborations like Beyoncé’s ‘Ivy Park’ collection with Adidas, or streaming services like Jay’s Tidal. Artists, brands and movements champ at the bit for a co-sign from the pair, and the two are widely considered a barometer for what’s cool</p>
-                <a href="articlepage.html" class="btn">Read more<i class="fas fa-chevron-right"></i></a>
-            </article>
+            
+
+            
         </div>
         </section>
         <!--Newsletter-->
@@ -67,7 +43,7 @@
                     <p>Subscribe to get email notifications when a new article is posted on the site.</p>
                     <div class="email-box">
                         <i class="fas fa-envelope"></i><br>
-                        <input type="email" name="" value="" placeholder="Enter your email"><br>
+                        <input type="email" name="email" value="" placeholder="Enter your email" class="putemail"><br>
                         <input class="button" type="submit" id="button">
                     </div> 
                 </form>
@@ -104,5 +80,6 @@
         const db = firebase.firestore();
             // db.settings({ timestampsInSnapshots: true});
         </script>
-            <script src="../JS/readArticle.js"></script>    
+            <script src="../JS/blog.js"></script>    
 </body>
+</html>

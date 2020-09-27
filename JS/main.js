@@ -54,7 +54,7 @@ form.addEventListener('Login', (e) =>{
 
 db.collection('Sibo-signin').get().then((snapshot) =>{
     snapshot.docs.forEach(docs =>{
-        //renderArticle(doc);
+        renderArticle(doc);
         console.log(docs.data())
     })
 })

@@ -6,12 +6,12 @@ const form = document.querySelector("#new-article")
 var button = document.getElementById('submit').addEventListener('click', buttonclicked ) 
  function buttonclicked(e) {
     e.preventDefault();
-    db.collection('Sibo').add({ 
+    db.collection('readmoreArticle').add({ 
         image: form.fileToUpload.value,
         h3: form.title.value,
-        p: form.description.value,
+        p: form.body.value,
     })
     form.fileToUpload.value = '';
     form.title.value = '';
-    form.description.value = '';
+    form.body.value = '';
 }
