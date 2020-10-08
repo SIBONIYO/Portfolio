@@ -1,70 +1,63 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="Eng">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="../css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
     <title>Jean Claude SIBONIYO | Welcome </title>
 </head>
-<body> 
-    <div class="menu-btn">
-        <i class="fas fa-bars fa-2x"></i>
-    </div>
+
+<body>
     <div class="container">
+        <div class="menu-btn">
+        </div>
         <!----nav-->
         <nav class="main-nav">
-
             <ul class="main-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="signin.html">Sign in</a></li>
                 <li><a href="blog.html">My blog</a></li>
-                <li><a href="createArticle.html">Create article</a></li>
             </ul>
         </nav>
         <hr>
-        <!-----My Blog----->
-        <a href="blog.html"></a>
-        <section class="blog-section">
-        <h2>My Blog.</h2>
-        <div class="blog-container">
-            
+        <!--my dashboard-->
+        <h3>Admin page</h3>
 
-
-
-
-            
-        </div>
-        </section>
-        <!--Newsletter-->
         <section>
-            <div class="newsletter">
-                <form action="" id="newsletter">
-                    <h3>Join Our Newsletter</h3>
-                    <p>Subscribe to get email notifications when a new article is posted on the site.</p>
-                    <div class="email-box">
-                        <i class="fas fa-envelope"></i><br>
-                        <input type="email" name="email" value="" placeholder="Enter your email" class="putemail"><br>
-                        <input class="button" type="submit" id="button">
-                    </div> 
-                </form>
+
+            <button class="create"><a href="../html/createArticle.html">Create Article</a></button>
+            <div class="createArticle btn">
+        </section>
+        <hr />
+        <section class="query-container">
+            <h3 id="queries">Comments or queries</h3>
+            <div class="query">
+                <p >Name of the sender</p>
+                <p>Email of the sender</p>
+                <p>Query body or subject</p>
             </div>
         </section>
     </div>
     <!-----Footer------>
+    </div>
     <footer class="footer">
         <ul>
-            <li><a href="#">&copy; siboniyo 2020</a></li>
+            <li><a href="">&copy; siboniyo 2020</a></li>
         </ul>
     </footer>
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
 
-        <script>
+    <script>
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         var firebaseConfig = {
@@ -81,8 +74,10 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
         const db = firebase.firestore();
-            // db.settings({ timestampsInSnapshots: true});
-        </script>
-            <script src="../JS/blog.js"></script>    
+        const auth = firebase.auth();
+                // db.settings({ timestampsInSnapshots: true});
+    </script>
+    <script src="../JS/dashboard.js"></script>
 </body>
+
 </html>

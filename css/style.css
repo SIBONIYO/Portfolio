@@ -29,9 +29,10 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height:60px ;
-    padding:20px 0;
+    height: 60px ;
+    padding: 20px;
     font-size: 13px;
+    font-weight: bold;
 }
 
 .main-nav ul {
@@ -196,6 +197,14 @@ ul {
     color: blue;
     text-transform: uppercase;
 }
+.alert {
+    text-align: center;
+    padding: 10px;
+    background: #79c879;
+    color: white;
+    margin-bottom: 10px;
+    display: none;
+}
 .contact-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -243,9 +252,7 @@ ul {
     .menu-btn:hover {
         opacity: 0.5;
     }
-    .main-nav ul.right-menu {
-        margin-right: 50px;
-    }
+    
     .main-nav ul.main-menu {
         display: block;
         position: absolute;

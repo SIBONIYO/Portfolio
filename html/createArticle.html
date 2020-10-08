@@ -4,48 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="../css/signin.css">
+    <link rel="stylesheet" type="text/css" href="../css/createArticle.css">
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
     <title>Jean Claude SIBONIYO | Welcome </title>
 </head>
 <body>
-    <div class="container">
-        <div class="menu-btn">
-            <i class="fas fa-bars fa-2x"></i>
-        </div>
-        <!----nav-->
-        <nav class="main-nav">
-            <ul class="main-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="signin.html">Sign in</a></li>
-                <li><a href="blog.html">My blog</a></li>
-            </ul>
-        </nav>
-        <hr>
-        <!-- sign in-->
-        <a href="signin.html"></a>
-        <Section>
-            <form id="form" >
-                <div class="signin-section success error">
-                <h3>Sign In</h3>
-                <div id="error"></div>
-                <p>Username</p>
-                <input type="text" placeholder="Enter Email" name="email" id="username" required>
-                <p>Password</p>
-                <input type="password" placeholder="Enter Password" name="password" id="password" required><br>
-                <input type="submit"  value="Login" id="submit">
-                </div>
-            </form>
-        </section>
-    </div>
-    <!-----Footer------>
-    <footer class="footer">
-        <ul>
-            <li><a href="">&copy; siboniyo 2020</a></li>
+
+    <!----nav-->
+    <nav class="main-nav">
+        <ul class="main-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+            <li><a href="blog.html">My blog</a></li>
         </ul>
-    </footer>
+    </nav>
+    <hr>
+    <hr>
+    <!--filling up the new article-->
+    <div class="blog-container">
+        <form action="" class="container-article" id="new-article">
+            <h2>New article</h2>
+            <p>Write the title of the article:</p>
+            <input type="text" name='subtitle' id="subtitle"><br>
+            <p>Article Image:</p>
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <p>Description of the article:</p>
+            <textarea type="text" name="description" id="description"></textarea><br>
+            <p>Body of the article:</p>
+            <textarea type="text" name="body" id="body"></textarea><br>
+            <input type="submit" value="submit" id="submit">
+            
+        </form>
+    </div>
     
         <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -69,8 +61,10 @@
             firebase.analytics();
             const db = firebase.firestore();
             const auth = firebase.auth();
-                // db.settings({ timestampsInSnapshots: true});
+            // db.settings({ timestampsInSnapshots: true});
             </script>
-    <script src="../JS/signin.js"></script>
+            <script type="text/javascript"></script>
+    <script src="../JS/createArticle.js"></script>
+
 </body>
 </html>

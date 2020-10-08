@@ -20,11 +20,15 @@ ul {
     width: 90%;
     max-width: 1100px;
     margin: auto;
-    padding: 10px 12px 600px 12px;
+    padding: 10px 12px 585px 12px;
 }
 
 .main-nav ul {
     display: flex;
+    padding: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #262626;
 }
 .main-nav ul li {
     padding: 0 10px;
@@ -38,10 +42,6 @@ ul {
     border-bottom: 2px solid #262626;
 }
 
-.main-nav ul.main-menu {
-    flex: 1;
-    margin-left: 20px;
-}
 .menu-btn {
     cursor: pointer;
     position: absolute;
@@ -53,44 +53,56 @@ ul {
 
 .signin-section{
     width: 320px;
-    height: 380px;
+    height: 400px;
     top: 50%;
     left: 50%;
     position: absolute;
     background-color: cadetblue;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 30px;
+    padding: inherit;
+    border-radius: 10px;
+}
+.signin-section #error {
+    background: red;
+    font-size: 10px;
 }
 .signin-section h3{
     color: black;
     text-align: center;
     font-size: 22px;
-    margin-left: -25%;
-    margin-bottom: 20px;
+    margin: 20px 20px;
 }
 .signin-section p{
-    margin-left: -46%;
+    margin-left: -50%;
     font-weight: bold;
     text-align: center;
     color: black;
-}
-.signin-section input{
-    width: 70%;
-    margin-bottom: 10px;
-    margin-top: 20px;
 }
 .signin-section input[type="text"], input[type="password"] {
     height: 25px;
     color: black;
     font-size: 16px;
     margin-left: 10%;
+    width: 250px;
+}
+.signin-section .success input[type="text"], input[type="password"]{
+    border-color: green;
+}
+.signin-section .error input[type="text"], input[type="password"]{
+    border-color: red;
 }
 .signin-section input[type="submit"]{
-    width: 25%;
+    width: 70px;
+    height: 27px;
+    font-size: 20px;
     margin-left: 10%;
     margin-top: 20px;
 
+}
+.signin-section input[type="submit"]:hover {
+    color: cadetblue;
+    background: brown;
 }
 /* Footer */
 .footer{
@@ -104,15 +116,21 @@ ul {
 }
 
 @media(max-width:800px){
+    .menu-btn {
+        display: none;
+    }
+    .menu-btn:hover {
+        opacity: 0.5;
+    }
     .container {
         width: 90%;
         max-width: 1100px;
         margin: auto;
-        padding: 10px 12px 800px 12px;
+        padding: 10px 0px 800px 0px;
     }
     .signin-section {
         margin-top: -10%;
-        width: 50%;
+        width: 70%;
         height: 50%;
     }
     .signin-section h3{
@@ -142,17 +160,30 @@ ul {
 @media(max-width:500px){
     .signin-section p{
         font-weight: bold;
-        margin-left: -20%;
+        margin-left: -80%;
+        font-size: 25px;
     }
     .signin-section input[type="text"], input[type="password"] {
-        height: 20px;
+        height: 40px;
         color: black;
-        font-size: 13px;
-        margin-left: 20%;
-        width: 60%;
+        font-size: 25px;
+        margin-left: -20%;
+        width: 130%;
     }
     .signin-section input[type="submit"]{
-        width: 20%;
-        margin-left: 20%;
+        width: 60%;
+        margin-left: -20%;
+    }
+    .signin-section{
+        width: 320px;
+        height:450px;
+        top: 60%;
+        left: 50%;
+        position: absolute;
+        background-color: cadetblue;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 65px;
+        border-radius: 10px;
     }
 }

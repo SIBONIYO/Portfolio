@@ -1,0 +1,54 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+    font-size: 20px;
+}
+.container {
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #262626;
+    list-style-type: none;
+}
+.main-nav ul li {
+    padding: 0 10px;
+}
+
+.main-nav ul li a {
+    padding-bottom: 2px;
+    text-decoration: none;
+}
+
+
+.main-nav ul li a:hover {
+    border-bottom: 2px solid #262626;
+}
+/* admin page */
+.query-container h3{
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Footer */
+.footer{
+    background: silver;
+    color: #616161;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}

@@ -26,6 +26,8 @@ ul {
 }
 .main-nav ul {
     display: flex;
+    padding: 20px;
+    font-weight: bold;
 }
 
 .main-nav ul li {
@@ -58,22 +60,13 @@ ul {
     border: 0;
     font-weight: bold;
     padding: 10px 20px;
-    background: #262626;
+    background: #382929;
     color: #ffffff;
     font-size: 15px;
 }
 
 .btn .hover {
     opacity: 0.9;
-}
-
-.dark {
-    color: #ffffff;
-}
-
-.dark .btn {
-    background: #f4f4f4;
-    color: #333333;
 }
 
 /* Blog */
@@ -89,22 +82,50 @@ ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
-.blog img {
-    width: 70%;
-}
-
-.blog h3 {
-    margin-top: 2%;
-    margin-bottom: 2%;
-
-}
-
-.blog {
+.article{
+    margin: 10px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.article h3 {
+    color:darkcyan;
+}
+.article h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.article div{
+    margin-bottom: 15px;
+}
+.blog-container img {
+    width: 100%;
+}
+
+.blog-container subtitle {
+    margin-top: 2%;
+    margin-bottom: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.blog-container {
+    padding: 1px;
     margin: 10px;
 }
-
+.blog-container a {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #382929; 
+    font-size: 15px;
+    width: 90px;
+    height: 20px;
+}
 /* Newsletter */
 .newsletter {
     background:cadetblue;
