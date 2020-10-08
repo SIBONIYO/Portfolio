@@ -100,7 +100,7 @@ ul {
     margin-bottom: 15px;
 }
 .blog-container img {
-    width: 100%;
+    width: 40%;
 }
 
 .blog-container subtitle {
@@ -149,7 +149,7 @@ ul {
     font-weight: bold;
     font-size: 15px;
 }
-   
+
 .email-box.button .hover {
     opacity: 0.9;
 }

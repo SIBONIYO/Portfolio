@@ -6,11 +6,14 @@ function renderArticle(doc){
     let description = document.createElement('h4');
     let body = document.createElement('div');
     let readMore = document.createElement('a');
+    let image = document.createElement('img');
 
     article.setAttribute('class','article');
     subtitle.textContent = doc.data().subtitle;
     description.textContent = doc.data().description;
     body.textContent = doc.data().body.slice(0,100) + '...';
+    image.src = doc.data().image
+    image.setAttribute('class', 'image-preview')
 
     readMore.setAttribute('class','btn');
     readMore.setAttribute('href','articlepage.html');
@@ -23,6 +26,7 @@ function renderArticle(doc){
     // localStorage.setItem("articleId", doc.id)
 
     article.appendChild(subtitle);
+    article.appendChild(image);
     article.appendChild(description);
     article.appendChild(body);
     article.appendChild(readMore);

@@ -19,6 +19,13 @@ const display = (doc) => {
     article.appendChild(body)
 
     articlesSection.appendChild(article)
+
+    const deleteArticle = document.querySelector('#delete');
+    deleteArticle.addEventListener('click', () => {
+        db.collection('Sibo').doc(articleId).delete().then(() => {
+            location.assign('./blog.html')
+        })
+    })
 }
 
 db.collection('Sibo').doc(articleId).get().then(res => {
@@ -42,7 +49,7 @@ const displayComments = (doc) => {
 
     comments.appendChild(comment)
 } 
-db.collection('comments').get().then(resp =>{
+db.collection('comments').where("articleId",'==', articleId).get().then(resp =>{
     resp.docs.forEach((doc) => displayComments(doc.data()))
 })
 
@@ -54,8 +61,8 @@ commentForm.addEventListener('submit', (e) => {
     name: commentForm.name.value,
     email: commentForm.email.value,
     body: commentForm.body.value,
+    articleId,
   }
-  console.log(obj)
 
   db.collection('comments').add(obj).then(res =>{
       commentForm.name.value = ''

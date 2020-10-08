@@ -9,7 +9,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   let obj = {
 
-    image: form.fileToUpload.value,
+    image: form.image.value,
     subtitle: form.subtitle.value,
     description: form.description.value,
     body: form.body.value,
@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
   console.log(obj)
 
   db.collection('Sibo').add(obj)
-    form.fileToUpload.value = '',
+    form.image.value = '',
     form.subtitle.value = '';
     form.description.Value = '';
     form.body.Value = '';
