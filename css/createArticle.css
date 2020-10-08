@@ -16,10 +16,33 @@ body {
     max-width: 1100px;
     margin: auto;
 }
+.main-nav ul {
+    display: flex;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #262626;
+    list-style: none;
+    margin-left: 10px;
+}
+.main-nav ul li {
+    padding: 0 10px;
+}
+
+.main-nav ul li a {
+    padding-bottom: 0px;
+    margin: 0;
+    border-bottom: none;
+}
+
+.main-nav ul li a:hover {
+    border-bottom: 2px solid #262626;
+}
+
 .container-article{
     padding: 40px;
 }
-.container-article h3{
+.container-article h2{
     color: blue;
     font-size: 20px;
     text-align: center;
@@ -27,14 +50,8 @@ body {
     text-underline-position: below;
 }
 
-.container-article #title {
-    width: 500px;
-    height: 40px;
-    font-size: 25px;
-    color: darkcyan;
-}
-.container-article #date {
-    width: 250px;
+.container-article #subtitle {
+    width: 70%;
     height: 40px;
     font-size: 25px;
     color: darkcyan;
@@ -52,27 +69,6 @@ body {
     font-size: 25px;
     color: darkcyan;
 }
-.container-article #name {
-    width: 300px;
-    height: 40px;
-    font-size: 20px;
-    color: darkcyan;
-    margin-bottom: 10px;
-}
-.container-article #tel {
-    width: 300px;
-    height: 40px;
-    font-size: 20px;
-    color: darkcyan;
-    margin-bottom: 10px;
-}
-.container-article #email {
-    width: 70%;
-    height: 40px;
-    font-size: 25px;
-    color: darkcyan;
-    margin-bottom: 10px;
-}
 .container-article p{
     font-size: 20px;
     font-weight: bold;
@@ -89,4 +85,7 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-@mediaquery(minw)
+.container-article #submit :hover{
+    background:#768a2c;
+    cursor: pointer;
+}

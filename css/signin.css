@@ -42,17 +42,6 @@ ul {
     border-bottom: 2px solid #262626;
 }
 
-.main-nav ul.main-menu {
-    flex: 1;
-    margin-left: 20px;
-    top: 0;
-    left:0;
-    height: 100%;
-    border-right: #cccccc 1px solid;
-    opacity: 0.9;
-    transition: transform 0.5s ease-in-out;
-
-}
 .menu-btn {
     cursor: pointer;
     position: absolute;
@@ -64,14 +53,14 @@ ul {
 
 .signin-section{
     width: 320px;
-    height: 380px;
+    height: 400px;
     top: 50%;
     left: 50%;
     position: absolute;
     background-color: cadetblue;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 30px;
+    padding: inherit;
     border-radius: 10px;
 }
 .signin-section #error {
@@ -82,30 +71,25 @@ ul {
     color: black;
     text-align: center;
     font-size: 22px;
-    margin-left: -25%;
-    margin-bottom: 50px;
+    margin: 20px 20px;
 }
 .signin-section p{
-    margin-left: -46%;
+    margin-left: -50%;
     font-weight: bold;
     text-align: center;
     color: black;
 }
-.signin-section input{
-    width: 70%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.signin-section input[type="name"], input[type="password"] {
+.signin-section input[type="text"], input[type="password"] {
     height: 25px;
     color: black;
     font-size: 16px;
     margin-left: 10%;
+    width: 250px;
 }
-.signin-section .success input[type="name"], input[type="password"]{
+.signin-section .success input[type="text"], input[type="password"]{
     border-color: green;
 }
-.signin-section .error input[type="name"], input[type="password"]{
+.signin-section .error input[type="text"], input[type="password"]{
     border-color: red;
 }
 .signin-section input[type="submit"]{
@@ -192,7 +176,7 @@ ul {
     }
     .signin-section{
         width: 320px;
-        height: 550px;
+        height:450px;
         top: 60%;
         left: 50%;
         position: absolute;

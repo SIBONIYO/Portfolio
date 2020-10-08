@@ -1,35 +1,67 @@
-const blogContainer = document.querySelector('.blog-container')
+const articlesSection = document.querySelector('#article')
+const articleId = localStorage.getItem('article-id')
 
+const display = (doc) => {
+    const article = document.createElement('article')
+    const title = document.createElement('h2')
+    const image = document.createElement('img')
+    const body = document.createElement('p')
+    const description = document.createElement('h4')
 
-//create element and render article
-function renderArticle(doc){
-    let article = document.createElement('article');
-    let image = document.createElement('img');
-    let h3 = document.createElement('h3');
-    let p = document.createElement('p');
+    title.textContent = doc.subtitle
+    image.src = doc.image
+    body.textContent = doc.body
+    description.textContent = doc.description
 
-    article.setAttribute('class','blog');
-    image.setAttribute('src',`${doc.data().image}`);
-    h3.textContent = doc.data().h3;
-    p.textContent = doc.data().p;
-    
+    article.appendChild(title)
+    article.appendChild(image)
+    article.appendChild(description)
+    article.appendChild(body)
 
-    article.appendChild(image);
-    article.appendChild(h3);
-    article.appendChild(p);
-
-
-     
-    blogContainer.appendChild(article);
+    articlesSection.appendChild(article)
 }
 
+db.collection('Sibo').doc(articleId).get().then(res => {
+    display(res.data())
+})
 
+const displayComments = (doc) => {
+    const comments = document.querySelector('#comments')
+    const comment = document.createElement('div')
+    const email = document.createElement('i')
+    const name = document.createElement('h5')
+    const body = document.createElement('p')
 
-//getting article
+    body.textContent = doc.body
+    name.textContent = doc.name
+    email.textContent = doc.email
 
-db.collection('readmoreArticle').get().then((snapshot) =>{
-    snapshot.docs.forEach(doc =>{
-        renderArticle(doc);
-        console.log(doc.data())
-    })
+    comment.appendChild(name)
+    comment.appendChild(email)
+    comment.appendChild(body)
+
+    comments.appendChild(comment)
+} 
+db.collection('comments').get().then(resp =>{
+    resp.docs.forEach((doc) => displayComments(doc.data()))
+})
+
+const commentForm = document.querySelector('#commentForm')
+commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+  let obj = {
+
+    name: commentForm.name.value,
+    email: commentForm.email.value,
+    body: commentForm.body.value,
+  }
+  console.log(obj)
+
+  db.collection('comments').add(obj).then(res =>{
+      commentForm.name.value = ''
+      commentForm.email.value = ''
+      commentForm.body.value = ''
+      console.log(res)
+  })
+    
 })

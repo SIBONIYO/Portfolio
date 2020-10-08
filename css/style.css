@@ -197,6 +197,14 @@ ul {
     color: blue;
     text-transform: uppercase;
 }
+.alert {
+    text-align: center;
+    padding: 10px;
+    background: #79c879;
+    color: white;
+    margin-bottom: 10px;
+    display: none;
+}
 .contact-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

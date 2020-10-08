@@ -1,39 +1,38 @@
-const blogContainer = document.querySelector('.blog-container')
-
+ const blogContainer = document.querySelector('.blog-container')
 //create element and render article
 function renderArticle(doc){
     let article = document.createElement('article');
-    let image = document.createElement('img');
-    let h3 = document.createElement('h3');
-    let p = document.createElement('p');
-    let a = document.createElement('a');
-    let i = document.createElement('i');
+    let subtitle = document.createElement('h3');
+    let description = document.createElement('h4');
+    let body = document.createElement('div');
+    let readMore = document.createElement('a');
 
-    article.setAttribute('class','blog');
-    image.setAttribute('src',`${doc.data().image}`);
-    h3.textContent = doc.data().h3;
-    p.textContent = doc.data().p;
-    a.setAttribute('class','btn');
-    a.setAttribute('href','article.html');
-    a.textContent = "readMore";
-    i.setAttribute('class','fas fa-chevron-right');
+    article.setAttribute('class','article');
+    subtitle.textContent = doc.data().subtitle;
+    description.textContent = doc.data().description;
+    body.textContent = doc.data().body.slice(0,100) + '...';
 
+    readMore.setAttribute('class','btn');
+    readMore.setAttribute('href','articlepage.html');
+    readMore.textContent = "readMore";
+    
+    readMore.addEventListener('click', () => {
+        localStorage.setItem('article-id', doc.id)
+    })
 
+    // localStorage.setItem("articleId", doc.id)
 
-
-    article.appendChild(image);
-    article.appendChild(h3);
-    article.appendChild(p);
-    article.appendChild(a);
+    article.appendChild(subtitle);
+    article.appendChild(description);
+    article.appendChild(body);
+    article.appendChild(readMore);
 
      
     blogContainer.appendChild(article);
 }
 
 
-
 //getting article
-
 db.collection('Sibo').get().then((snapshot) =>{
     snapshot.docs.forEach(doc =>{
         renderArticle(doc);
@@ -41,12 +40,6 @@ db.collection('Sibo').get().then((snapshot) =>{
     })
 })
 
-//reading more on the article
-var a = document.getElementById('readmore').addEventListener('click',getmore)
-function getmore(e){
-    e.preventDefault();
-    db.collection('readmoreArticle').add()
-}
 
 
 //create element and rendering newsletter
@@ -61,6 +54,7 @@ function renderEmail(doc){
 
 //saving newsletter
 
+form=document.getElementById('newsletter');
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
     db.collection('Sibo-newsletter').add({ 

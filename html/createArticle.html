@@ -7,18 +7,33 @@
     <link rel="stylesheet" type="text/css" href="../css/createArticle.css">
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
     <title>Jean Claude SIBONIYO | Welcome </title>
 </head>
 <body>
+
+    <!----nav-->
+    <nav class="main-nav">
+        <ul class="main-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+            <li><a href="blog.html">My blog</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <hr>
+    <!--filling up the new article-->
     <div class="blog-container">
         <form action="" class="container-article" id="new-article">
-            <h3>New article</h3>
+            <h2>New article</h2>
             <p>Write the title of the article:</p>
-            <input type="text" name='title' placeholder="Write the Title of the new article" id="title"><br>
+            <input type="text" name='subtitle' id="subtitle"><br>
             <p>Article Image:</p>
             <input type="file" name="fileToUpload" id="fileToUpload">
             <p>Description of the article:</p>
             <textarea type="text" name="description" id="description"></textarea><br>
+            <p>Body of the article:</p>
+            <textarea type="text" name="body" id="body"></textarea><br>
             <input type="submit" value="submit" id="submit">
             
         </form>
@@ -45,8 +60,10 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
             const db = firebase.firestore();
+            const auth = firebase.auth();
             // db.settings({ timestampsInSnapshots: true});
             </script>
+            <script type="text/javascript"></script>
     <script src="../JS/createArticle.js"></script>
 
 </body>

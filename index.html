@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
     <title>Jean Claude SIBONIYO | Welcome </title>
 </head>
 <body> 
@@ -130,18 +132,20 @@
         <section class="contact-section">
             <a name="contact"></a>
             <h1>Contact me</h1><br>
+            <div class="alert">Your message has been sent</div>
             <div class="contact-container">
-                <form class="contact">
-                    <label for="fname">Names:</label><br>
-                    <input type="text" id="fname" name="fname" placeholder="Your name.."><br>
+                <!--Contact validation-->
+                <form class="contact" id="contactform">
+                    <label for="name">Names:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required><br>
                 
                     <label for="email">Email:</label><br>
-                    <input type="text" id="email" name="email" placeholder="Your email.."><br>
+                    <input type="text" id="email" name="email" placeholder="Your email.." required><br>
                 
                     <label for="subject">Subject</label><br>
                     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
 
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" id="submit">
                 </form>
                 <div class="address">
                     <p>Follow Jean Claude SIBONIYO</p><br>
@@ -163,6 +167,31 @@
     <script>
         document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
     </script>
+    
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+            <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyDQoS1UvoPDWk7OTkYuXsayVofkq_dCViM",
+                authDomain: "sibo-my-web-4553a.firebaseapp.com",
+                databaseURL: "https://sibo-my-web-4553a.firebaseio.com",
+                projectId: "sibo-my-web-4553a",
+                storageBucket: "sibo-my-web-4553a.appspot.com",
+                messagingSenderId: "884731873473",
+                appId: "1:884731873473:web:c13680b67d4c9b64312c40",
+                measurementId: "G-GD6STF3Y67"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            const db = firebase.firestore();
+                // db.settings({ timestampsInSnapshots: true});
+            </script>
+    <script src="./JS/contactform.js"></script>
     
 </body>
 </html> 

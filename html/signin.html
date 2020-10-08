@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/signin.css">
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
     <title>Jean Claude SIBONIYO | Welcome </title>
 </head>
 <body>
@@ -26,14 +27,14 @@
         <!-- sign in-->
         <a href="signin.html"></a>
         <Section>
-            <form id="form" onsubmit="return validation()">
+            <form id="form" >
                 <div class="signin-section success error">
                 <h3>Sign In</h3>
                 <div id="error"></div>
                 <p>Username</p>
-                <input type="name" placeholder="Enter Username" name="Username" id="username" required>
+                <input type="text" placeholder="Enter Email" name="email" id="username" required>
                 <p>Password</p>
-                <input type="password" placeholder="Enter Password" name="psw" id="password" required><br>
+                <input type="password" placeholder="Enter Password" name="password" id="password" required><br>
                 <input type="submit"  value="Login" id="submit">
                 </div>
             </form>
@@ -67,8 +68,9 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
             const db = firebase.firestore();
+            const auth = firebase.auth();
                 // db.settings({ timestampsInSnapshots: true});
             </script>
-    <script src="../JS/main.js"></script>
+    <script src="../JS/signin.js"></script>
 </body>
 </html>

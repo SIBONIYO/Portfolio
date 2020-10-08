@@ -28,36 +28,25 @@
             </nav>
         
             <!-----Article----->
-            <a href="blog.html"></a>
-            <section class="article-section">
             <h2>News and stories.</h2>
             <div id="article">
-                 
+                 <form id="edit-form">
+
+                     <div>
+                         <input type="text" name="title">
+                     </div>
+                     <div>
+                         <input type="text" name="description">
+                     </div>
+                     <div>
+                         <input type="text" name="image">
+                     </div>
+                     <textarea name="body" id="" cols="30" rows="10"></textarea>
+                     <br />
+                     <input id="update" type="submit" value="Update article"/>&nbsp;
+                 </form>
             </div>
-            <div class="edit-btn">
-            <br>
-            <button><a href="./editArticle.html"> Edit article</a></button>&nbsp;
-            <button>delete article</button>
-            <br>
-            </div>
-            <hr>
-            <div class="article-container">
-                <form id='commentForm'>
-                    <div class="comment">
-                        <p>Comments:</p>
-                        <input type="comment" name="body" placeholder="Put your comments"><br>
-                        
-                        <p>Name:</p>
-                        <input type="text" name="name" placeholder="Enter your name" href="">
-                        <p>Email</p>
-                        <input type="text" placeholder="Enter your email" name="email">
-                        <input type="submit" class="button" name="Submit" value="Submit">
-                    </div>
-                </form>
-                    <hr>
-                    <section id="comments">
-                           </section>
-            </section>
+           
             <!--Newsletter-->
             <section>
                 <div class="newsletter">
@@ -105,6 +94,6 @@
             const auth = firebase.auth();
                 // db.settings({ timestampsInSnapshots: true});
             </script>
-                <script src="../JS/articlePage.js"></script>  
+                <script src="../JS/editArticle.js"></script>  
 
 </html>
